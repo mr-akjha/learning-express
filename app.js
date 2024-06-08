@@ -13,6 +13,15 @@ app.use(bodyParser.urlencoded({extended:true}));
 /** Importing the web routes from web.js file */
 const webRoutes = require("./routes/web");
 
+/**
+ * Using path module to work with paths
+ */
+const path = require('path');
+
+/**
+ * Added access to public folder to load static files
+ */
+app.use(express.static(path.join(__dirname,'public')));
 
 /**  Registering the  main route to display hello world */
 app.get('/',(req,res,next) => {
