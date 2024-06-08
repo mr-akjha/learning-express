@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <h2 class="form-title">Product Form</h2>
+    <form class="product-form" action="/web/store-product" method="POST">
+        <label for="productName" class="form-label">Product Name:</label>
+        <input type="text" id="productName" name="name" class="form-input">
+
+        <label for="description" class="form-label">Description:</label>
+        <textarea id="description" name="description" rows="4" class="form-input"></textarea>
+
+        <label for="price" class="form-label">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" class="form-input">
+
+        <label for="quantity" class="form-label">Available Quantity:</label>
+        <input type="number" id="quantity" name="quantity" class="form-input">
+
+        <input type="submit" value="Submit" class="form-submit">
+    </form>
+</body>
+</html>
